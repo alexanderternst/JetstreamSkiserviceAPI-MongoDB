@@ -4,11 +4,11 @@ namespace JetstreamSkiserviceAPIMongoDB.Services
 {
     public interface IRegistrationService
     {
-        List<Registration> GetAll();
+        List<Registration> Get();
 
         Registration Get(string id);
 
-        void Add(Registration registration);
+        void Create(Registration registration);
 
         void Delete(string id);
 

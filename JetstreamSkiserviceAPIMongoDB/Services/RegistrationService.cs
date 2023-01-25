@@ -22,7 +22,7 @@ namespace JetstreamSkiserviceAPIMongoDB.Services
                 registrationDatabaseSettings.Value.RegistrationCollectionName);
         }
 
-        public List<Registration> GetAll()
+        public List<Registration> Get()
         {
             return _registrationCollection.Find(_ => true).ToList();
         }
@@ -32,7 +32,7 @@ namespace JetstreamSkiserviceAPIMongoDB.Services
             return _registrationCollection.Find(x => x.Id == id).FirstOrDefault();
         }
 
-        public void Add(Registration registration)
+        public void Create(Registration registration)
         {
             _registrationCollection.InsertOne(registration);
         }

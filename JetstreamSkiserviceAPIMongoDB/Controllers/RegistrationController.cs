@@ -20,7 +20,7 @@ namespace JetstreamSkiserviceAPIMongoDB.Controllers
         }
 
         [HttpGet]
-        public List<Registration> Get() => _registrationService.GetAll();
+        public List<Registration> Get() => _registrationService.Get();
 
         [HttpGet("{id:length(24)}")]
         public ActionResult<Registration> Get(string id)
@@ -37,7 +37,7 @@ namespace JetstreamSkiserviceAPIMongoDB.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex.Message);
-                return Content("Error");
+                return BadRequest("Error: " + ex.Message);
                 // BadRequest
             }
         }
@@ -60,7 +60,7 @@ namespace JetstreamSkiserviceAPIMongoDB.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex.Message);
-                return Content("Error");
+                return BadRequest("Error: " + ex.Message);
             }
         }
 
@@ -80,7 +80,22 @@ namespace JetstreamSkiserviceAPIMongoDB.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex.Message);
-                return Content("Error");
+                return BadRequest("Error: " + ex.Message);
+            }
+        }
+
+        [HttpPost]
+        public ActionResult Post(Registration newRegistration)
+        {
+            try
+            { 
+                _registrationService.Create(newRegistration);
+                return CreatedAtAction(nameof(Get), new { id = newRegistration.Id }, newRegistration);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+                return BadRequest("Error: " + ex.Message);
             }
         }
     }
