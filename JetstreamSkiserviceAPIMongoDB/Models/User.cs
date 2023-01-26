@@ -4,6 +4,9 @@ using System.Text.Json.Serialization;
 
 namespace JetstreamSkiserviceAPIMongoDB.Models
 {
+    /// <summary>
+    /// User Model Klasse
+    /// </summary>
     public class User
     {
         [BsonId]

@@ -1,7 +1,6 @@
 ﻿using JetstreamSkiserviceAPIMongoDB.Models;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using MongoDB.Bson;
 using MongoDB.Driver;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -14,9 +13,11 @@ namespace JetstreamSkiserviceAPIMongoDB.Services
         private readonly SymmetricSecurityKey _key;
         private readonly IMongoCollection<User> _userCollection;
 
-        public ObjectId ObId { get; set; }
-
-
+        /// <summary>
+        /// Registration Service Konstruktor mit Dateneinstellungen/-konfiguration
+        /// </summary>
+        /// <param name="registrationDatabaseSettings">Datenbankeinstellungen</param>
+        /// <param name="config">JSON Konfiguration</param>
         public UserSevice(IOptions<RegistrationDatabaseSettings> registrationDatabaseSettings, IConfiguration config)
         {
             try
@@ -37,7 +38,13 @@ namespace JetstreamSkiserviceAPIMongoDB.Services
                 Console.WriteLine(ex.Message);
             }
         }
-
+        
+        /// <summary>
+        /// Methode welche JWT-Token von Username erstellt
+        /// </summary>
+        /// <param name="username">Username</param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public string CreateToken(string username)
         {
             try
@@ -72,6 +79,10 @@ namespace JetstreamSkiserviceAPIMongoDB.Services
             }
         }
 
+        /// <summary>
+        /// Ban Methode welche in MongoDB Datenbank counter von Benutzer + 1 rechnet (Wenn counter = 3 ist Benutzer gebannt)
+        /// </summary>
+        /// <param name="id">user-id</param>
         public void Ban(string id)
         {
             User user = new User();
@@ -79,17 +90,15 @@ namespace JetstreamSkiserviceAPIMongoDB.Services
             if (user != null)
             {
                 user.Counter++;
-
-                //var client = new MongoClient("mongodb://localhost:27017");
-                //var database = client.GetDatabase("SkiServiceDB");
-                //var collection = database.GetCollection<User>("users");
-
-              //var filter = Builders<User>.Filter.Eq("_id",  user.Id);
                 var update = Builders<User>.Update.Set("counter", user.Counter);
                 _userCollection.UpdateOne(x => x.Id == id, update);
             }
         }
 
+        /// <summary>
+        /// Ban Methode welche in MongoDB Datenbank counter auf 0 zurücksetzt (Benutzer entbannt)
+        /// </summary>
+        /// <param name="id">user-id</param>
         public void Unban(string id)
         {
             User user = new User();
@@ -102,6 +111,10 @@ namespace JetstreamSkiserviceAPIMongoDB.Services
             }
         }
 
+        /// <summary>
+        /// Get Methode welche Benutzer aus MongoDB Datenbank abruft
+        /// </summary>
+        /// <returns></returns>
         public List<User> Get()
         {
             return _userCollection.Find(_ => true).ToList();

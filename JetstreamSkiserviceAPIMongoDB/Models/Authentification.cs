@@ -2,6 +2,9 @@
 
 namespace JetstreamSkiserviceAPIMongoDB.Models
 {
+    /// <summary>
+    /// Authentifikation Model Klasse
+    /// </summary>
     public class Authentification
     {
         [JsonPropertyName("user_username")]

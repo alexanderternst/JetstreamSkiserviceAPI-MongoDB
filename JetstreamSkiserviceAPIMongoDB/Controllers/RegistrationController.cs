@@ -12,16 +12,30 @@ namespace JetstreamSkiserviceAPIMongoDB.Controllers
     {
         private IRegistrationService _registrationService;
         private readonly ILogger<RegistrationController> _logger;
-
+        
+        /// <summary>
+        /// Registration Controller Konstruktor mit instanziierung
+        /// </summary>
+        /// <param name="registrationService">Service Interface</param>
+        /// <param name="logger">Logger</param>
         public RegistrationController(IRegistrationService registrationService, ILogger<RegistrationController> logger)
         {
             _registrationService = registrationService;
             _logger = logger;
         }
 
+        /// <summary>
+        /// Get Methode welche Service aufruft und Registrationen abruft
+        /// </summary>
+        /// <returns>Liste von Registrationen</returns>
         [HttpGet]
         public List<Registration> Get() => _registrationService.Get();
 
+        /// <summary>
+        /// GetById Methode welche Service aufruft und Registration nach id aufruft
+        /// </summary>
+        /// <param name="id">id</param>
+        /// <returns>Registration</returns>
         [HttpGet("{id:length(24)}")]
         public ActionResult<Registration> Get(string id)
         {
@@ -41,6 +55,12 @@ namespace JetstreamSkiserviceAPIMongoDB.Controllers
             }
         }
 
+        /// <summary>
+        /// Update Methode welche Service aufruft und Registration modifiziert
+        /// </summary>
+        /// <param name="id">id</param>
+        /// <param name="updatedRegistration">Geänderte Daten</param>
+        /// <returns>ActionResult</returns>
         [HttpPut("{id:length(24)}")]
         public ActionResult Update(string id, Registration updatedRegistration)
         {
@@ -63,6 +83,11 @@ namespace JetstreamSkiserviceAPIMongoDB.Controllers
             }
         }
 
+        /// <summary>
+        /// Delete Methode welche Service aufruft und Registration löscht
+        /// </summary>
+        /// <param name="id">id</param>
+        /// <returns>ActionResult</returns>
         [HttpDelete("{id:length(24)}")]
         public ActionResult Delete(string id)
         {
@@ -83,6 +108,11 @@ namespace JetstreamSkiserviceAPIMongoDB.Controllers
             }
         }
 
+        /// <summary>
+        /// Post Methode welche Service aufruft und Registration erstellt
+        /// </summary>
+        /// <param name="newRegistration">Neue Daten</param>
+        /// <returns>ActionResult</returns>
         [AllowAnonymous]
         [HttpPost]
         public ActionResult Post(Registration newRegistration)

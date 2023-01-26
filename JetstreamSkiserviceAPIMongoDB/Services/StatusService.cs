@@ -8,6 +8,10 @@ namespace JetstreamSkiserviceAPIMongoDB.Services
     {
         public readonly IMongoCollection<Registration> _registrationCollection;
 
+        /// <summary>
+        /// Status Service Konstruktor mit Dateneinstellungen/-konfiguration
+        /// </summary>
+        /// <param name="registrationDatabaseSettings">Datenbankeinstellungen</param>
         public StatusService(IOptions<RegistrationDatabaseSettings> registrationDatabaseSettings)
         {
             try
@@ -27,12 +31,21 @@ namespace JetstreamSkiserviceAPIMongoDB.Services
             }
         }
 
+        /// <summary>
+        /// Get Methode welche Registrationen von MongoDB Datenbank nach Status gefiltert abruft
+        /// </summary>
+        /// <returns>Liste von Registrationen</returns>
         public List<Registration> Get()
         {
             var sort = Builders<Registration>.Sort.Ascending("status");
             return _registrationCollection.Find(_ => true).Sort(sort).ToList();
         }
 
+        /// <summary>
+        /// Get Methode welche Registrationen von MongoDB Datenbank nach Status ausgibt
+        /// </summary>
+        /// <param name="status">status</param>
+        /// <returns>Liste von Registrationen</returns>
         public List<Registration> Get(string status)
         {
             var filter = Builders<Registration>.Filter.Eq("status", status);

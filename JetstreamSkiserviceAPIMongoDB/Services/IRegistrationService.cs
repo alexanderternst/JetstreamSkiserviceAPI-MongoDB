@@ -2,6 +2,9 @@
 
 namespace JetstreamSkiserviceAPIMongoDB.Services
 {
+    /// <summary>
+    /// Interface für Registration Service
+    /// </summary>
     public interface IRegistrationService
     {
         List<Registration> Get();

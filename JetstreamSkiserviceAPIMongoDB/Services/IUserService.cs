@@ -2,6 +2,9 @@
 
 namespace JetstreamSkiserviceAPIMongoDB.Services
 {
+    /// <summary>
+    /// Interface für User Service
+    /// </summary>
     public interface IUserService
     {
         string CreateToken(string username);

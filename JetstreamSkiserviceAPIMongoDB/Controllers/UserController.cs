@@ -13,12 +13,22 @@ namespace JetstreamSkiserviceAPIMongoDB.Controllers
         private readonly IUserService _userService;
         private readonly ILogger<UserController> _logger;
 
+        /// <summary>
+        /// User Controller Konstruktor mit instanziierung
+        /// </summary>
+        /// <param name="userService">Service Interface</param>
+        /// <param name="logger">Logger</param>
         public UserController(IUserService userService, ILogger<UserController> logger)
         {
             _userService = userService;
             _logger = logger;
         }
 
+        /// <summary>
+        /// Post Methode welche Service aufruft und Authentifikation durchführt und JWT-Key ausgibt
+        /// </summary>
+        /// <param name="login">Login</param>
+        /// <returns>ActionResult (JWT-Token)</returns>
         [AllowAnonymous]
         [HttpPost("login")]
         public ActionResult Login(Authentification login)
@@ -68,6 +78,11 @@ namespace JetstreamSkiserviceAPIMongoDB.Controllers
             }
         }
 
+        /// <summary>
+        /// Unban Methode welche Service aufruft und Benutzer entbannt
+        /// </summary>
+        /// <param name="id">user-id</param>
+        /// <returns>ActionResult</returns>
         [HttpPut("unban/{id}")]
         public ActionResult Unban(string id)
         {
@@ -83,6 +98,10 @@ namespace JetstreamSkiserviceAPIMongoDB.Controllers
             }
         }
 
+        /// <summary>
+        /// Get Methode welche Service aufruft und Benutzer ausgibt
+        /// </summary>
+        /// <returns>Liste von Benutzern</returns>
         [HttpGet]
         public ActionResult<List<User>> Get()
         {

@@ -5,7 +5,7 @@ using System.Text.Json.Serialization;
 namespace JetstreamSkiserviceAPIMongoDB.Models
 {
     /// <summary>
-    /// Registration Klasse
+    /// Registration Model Klasse
     /// </summary>
     public class Registration
     {
