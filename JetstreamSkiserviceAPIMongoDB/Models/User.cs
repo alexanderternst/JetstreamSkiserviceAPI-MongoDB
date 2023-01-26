@@ -9,7 +9,7 @@ namespace JetstreamSkiserviceAPIMongoDB.Models
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         [JsonPropertyName("user_id")]
-        public string Id { get; set; }
+        public string? Id { get; set; }
 
         [BsonElement("username")]
         [JsonPropertyName("user_username")]
@@ -22,5 +22,9 @@ namespace JetstreamSkiserviceAPIMongoDB.Models
         [BsonElement("counter")]
         [JsonPropertyName("user_counter")]
         public int Counter { get; set; }
+
+        [BsonElement("role")]
+        [JsonIgnore]
+        public string? Role { get; set; }
     }
 }

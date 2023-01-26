@@ -1,6 +1,6 @@
 use SkiServiceDB
-db.registrations.drop()
 
+db.registrations.drop()
 db.createCollection("registrations", {
    validator: {
       $jsonSchema: {
@@ -53,196 +53,36 @@ db.createCollection("registrations", {
 }
  )
 
+db.users.drop()
+db.createCollection("users", {
+   validator: {
+      $jsonSchema: {
+         bsonType: "object",
+         title: "User Object Validation",
+         required: [ "username", "password", "counter", "role" ],
+         properties: {
+            username: {
+               bsonType: "string",
+               description: "'username' must be a string and is required"
+            },
+            password: {
+               bsonType: "string",
+               description: "'password' must be a string and is required"
+            },
+            counter: {
+               bsonType: "int",
+               description: "'counter' must be an int and is required"
+            },
+            role: {
+               bsonType: "string",
+               enum: ["level1", "level2", "level3"],
+               description: "'role' must be a string and is required"
+            }
+        }  
+      }
+   }
+}
+ )
+
 db.registrations.createIndex( { name: 1, priority: 1, status: 1, service: 1 } )
 db.registrations.getIndexes()
-
-
-db.registrations.insertMany([
-  {
-    "name": "Alexander Ernst",
-    "email": "alexander.ernst04@gmail.com",
-    "phone": "077 463 35 93",
-    "create_date": ISODate("2022-10-05T00:00:00"),
-    "pickup_date": ISODate("2022-10-10T00:00:00"),
-    "status": "abgeschlossen",
-    "priority": "Standard",
-    "service": "Grosser-Service",
-    "comment": "hello"
-  },
-  {
-    "name": "Alexander Ernst",
-    "email": "alexander.ernst04@gmail.com",
-    "phone": "077 463 35 93",
-    "create_date": ISODate("2022-12-17T00:00:00"),
-    "pickup_date": ISODate("2022-12-24T00:00:00"),
-    "status": "InArbeit",
-    "priority": "Standard",
-    "service": "Grosser-Service",
-    "comment": "vorsicht mit ski"
-  },
-  {
-    "name": "Alexander Ernst",
-    "email": "alexander.ernst04@gmail.com",
-    "phone": "0774633593",
-    "create_date": ISODate("2022-12-17T00:00:00"),
-    "pickup_date": ISODate("2022-12-22T00:00:00"),
-    "status": "InArbeit",
-    "priority": "Express",
-    "service": "Heisswachsen",
-    "comment": "no comment"
-  },
-  {
-    "name": "Alexander Ernst",
-    "email": "alexander.ernst04@gmail.com",
-    "phone": "0774633593",
-    "create_date": ISODate("2022-12-17T00:00:00"),
-    "pickup_date": ISODate("2022-12-22T00:00:00"),
-    "status": "Offen",
-    "priority": "Express",
-    "service": "Heisswachsen",
-    "comment": "no comment"
-  },
-  {
-    "name": "Alexander Ernst",
-    "email": "alexander.ernst04@gmail.com",
-    "phone": "0774633593",
-    "create_date": ISODate("2022-12-17T00:00:00"),
-    "pickup_date": ISODate("2022-12-22T00:00:00"),
-    "status": "Offen",
-    "priority": "Express",
-    "service": "Heisswachsen",
-    "comment": "no comment"
-  },
-  {
-    "name": "Alexander Ernst",
-    "email": "alexander.ernst04@gmail.com",
-    "phone": "0774633593",
-    "create_date": ISODate("2022-12-17T00:00:00"),
-    "pickup_date": ISODate("2022-12-22T00:00:00"),
-    "status": "Offen",
-    "priority": "Express",
-    "service": "Heisswachsen",
-    "comment": "no comment"
-  },
-  {
-    "name": "Alexander Ernst",
-    "email": "alexander.ernst04@gmail.com",
-    "phone": "0774633593",
-    "create_date": ISODate("2022-12-17T00:00:00"),
-    "pickup_date": ISODate("2022-12-22T00:00:00"),
-    "status": "Offen",
-    "priority": "Express",
-    "service": "Heisswachsen",
-    "comment": "no comment"
-  },
-  {
-    "name": "Alexander Ernst",
-    "email": "alexander.ernst04@gmail.com",
-    "phone": "0774633593",
-    "create_date": ISODate("2022-12-17T00:00:00"),
-    "pickup_date": ISODate("2022-12-22T00:00:00"),
-    "status": "Offen",
-    "priority": "Express",
-    "service": "Heisswachsen",
-    "comment": "no comment"
-  },
-  {
-    "name": "Alexander Ernst",
-    "email": "alexander.ernst04@gmail.com",
-    "phone": "0774633593",
-    "create_date": ISODate("2022-12-17T00:00:00"),
-    "pickup_date": ISODate("2022-12-22T00:00:00"),
-    "status": "Offen",
-    "priority": "Express",
-    "service": "Heisswachsen",
-    "comment": "no comment"
-  },
-  {
-    "name": "Alexander Ernst",
-    "email": "alexander.ernst04@gmail.com",
-    "phone": "0774633593",
-    "create_date": ISODate("2022-12-17T00:00:00"),
-    "pickup_date": ISODate("2022-12-22T00:00:00"),
-    "status": "Offen",
-    "priority": "Express",
-    "service": "Heisswachsen",
-    "comment": "no comment"
-  },
-  {
-    "name": "Alexander Ernst",
-    "email": "alexander.ernst04@gmail.com",
-    "phone": "0774633593",
-    "create_date": ISODate("2022-12-17T00:00:00"),
-    "pickup_date": ISODate("2022-12-22T00:00:00"),
-    "status": "Offen",
-    "priority": "Express",
-    "service": "Heisswachsen",
-    "comment": "no comment"
-  },
-  {
-    "name": "Alexander Ernst",
-    "email": "alexander.ernst04@gmail.com",
-    "phone": "0774633593",
-    "create_date": ISODate("2022-12-17T00:00:00"),
-    "pickup_date": ISODate("2022-12-22T00:00:00"),
-    "status": "Offen",
-    "priority": "Express",
-    "service": "Heisswachsen",
-    "comment": "no comment"
-  },
-  {
-    "name": "Alexander Ernst",
-    "email": "alexander.ernst04@gmail.com",
-    "phone": "0774633593",
-    "create_date": ISODate("2022-12-17T00:00:00"),
-    "pickup_date": ISODate("2022-12-22T00:00:00"),
-    "status": "Offen",
-    "priority": "Express",
-    "service": "Heisswachsen",
-    "comment": "no comment"
-  },
-  {
-    "name": "Alexander Ernst",
-    "email": "alexander.ernst04@gmail.com",
-    "phone": "0774633593",
-    "create_date": ISODate("2022-12-17T00:00:00"),
-    "pickup_date": ISODate("2022-12-22T00:00:00"),
-    "status": "Offen",
-    "priority": "Express",
-    "service": "Heisswachsen",
-    "comment": "no comment"
-  },
-  {
-    "name": "Alexander Ernst",
-    "email": "alexander.ernst04@gmail.com",
-    "phone": "0774633593",
-    "create_date": ISODate("2022-12-17T00:00:00"),
-    "pickup_date": ISODate("2022-12-22T00:00:00"),
-    "status": "Offen",
-    "priority": "Express",
-    "service": "Heisswachsen",
-    "comment": "no comment"
-  },
-  {
-    "name": "Alexander Ernst",
-    "email": "alexander.ernst04@gmail.com",
-    "phone": "0774633593",
-    "create_date": ISODate("2022-12-17T00:00:00"),
-    "pickup_date": ISODate("2022-12-22T00:00:00"),
-    "status": "Offen",
-    "priority": "Express",
-    "service": "Heisswachsen",
-    "comment": "no comment"
-  },
-  {
-    "name": "Alexander Musterman",
-    "email": "alexander.ernst04@gmail.com",
-    "phone": "0774633593",
-    "create_date": ISODate("2022-12-17T00:00:00"),
-    "pickup_date": ISODate("2022-12-22T00:00:00"),
-    "status": "Offen",
-    "priority": "Express",
-    "service": "Heisswachsen",
-    "comment": "no comment"
-  }
-])

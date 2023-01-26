@@ -1,11 +1,11 @@
 ﻿using JetstreamSkiserviceAPIMongoDB.Models;
 using JetstreamSkiserviceAPIMongoDB.Services;
-using Microsoft.AspNetCore.Diagnostics;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JetstreamSkiserviceAPIMongoDB.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class RegistrationController : ControllerBase
@@ -38,7 +38,6 @@ namespace JetstreamSkiserviceAPIMongoDB.Controllers
             {
                 _logger.LogError(ex.Message);
                 return BadRequest("Error: " + ex.Message);
-                // BadRequest
             }
         }
 
@@ -55,7 +54,7 @@ namespace JetstreamSkiserviceAPIMongoDB.Controllers
                 updatedRegistration.Id = registration.Id;
 
                 _registrationService.Update(id, updatedRegistration);
-                return NoContent();
+                return CreatedAtAction(nameof(Get), new { id = updatedRegistration.Id }, updatedRegistration);
             }
             catch (Exception ex)
             {
@@ -75,7 +74,7 @@ namespace JetstreamSkiserviceAPIMongoDB.Controllers
                     return NotFound();
                 }
                 _registrationService.Delete(id);
-                return NoContent();
+                return Content($"Registration with id {id} deleted.");
             }
             catch (Exception ex)
             {
@@ -84,6 +83,7 @@ namespace JetstreamSkiserviceAPIMongoDB.Controllers
             }
         }
 
+        [AllowAnonymous]
         [HttpPost]
         public ActionResult Post(Registration newRegistration)
         {

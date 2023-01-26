@@ -1,8 +1,6 @@
 ﻿using JetstreamSkiserviceAPIMongoDB.Models;
 using Microsoft.Extensions.Options;
-using MongoDB.Bson;
 using MongoDB.Driver;
-using System.Text.Json;
 
 namespace JetstreamSkiserviceAPIMongoDB.Services
 {
@@ -12,14 +10,21 @@ namespace JetstreamSkiserviceAPIMongoDB.Services
 
         public RegistrationService(IOptions<RegistrationDatabaseSettings> registrationDatabaseSettings)
         {
-            var mongoClient = new MongoClient(
-            registrationDatabaseSettings.Value.ConnectionString);
+            try
+            {
+                var mongoClient = new MongoClient(
+                registrationDatabaseSettings.Value.ConnectionString);
 
-            var mongoDatabase = mongoClient.GetDatabase(
-                registrationDatabaseSettings.Value.DatabaseName);
+                var mongoDatabase = mongoClient.GetDatabase(
+                    registrationDatabaseSettings.Value.DatabaseName);
 
-            _registrationCollection = mongoDatabase.GetCollection<Registration>(
-                registrationDatabaseSettings.Value.RegistrationCollectionName);
+                _registrationCollection = mongoDatabase.GetCollection<Registration>(
+                    registrationDatabaseSettings.Value.RegistrationCollectionName);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         public List<Registration> Get()
