@@ -1,0 +1,336 @@
+{
+	"info": {
+		"_postman_id": "d94752ed-1110-4e53-a54f-b73ddecffbcc",
+		"name": "JetstreamAPI-MongoDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22831382"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhbGV4YW5kZXIiLCJuYmYiOjE2NzQ3NjAzMDYsImV4cCI6MTY3NDg0NjcwNiwiaWF0IjoxNjc0NzYwMzA2fQ.M8D8bkqwM2vcB76w5TgXULRqrhKAWpQfa9g9mtCEdjGVKDAgLnc1819KALKJazaCrozwcKyXYC6WSeW42dI6Gw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7244/api/Registration",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7244",
+					"path": [
+						"api",
+						"Registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"registration_name\": \"Alexander Ernst\",\r\n  \"registration_email\": \"alexander.ernst04@gmail.com\",\r\n  \"registration_phone\": \"0774633593\",\r\n  \"registration_create_date\": \"2022-12-17\",\r\n  \"registration_pickup_date\": \"2022-12-22\",\r\n  \"registration_status\": \"Offen\",\r\n  \"registration_priority\": \"Express\",\r\n  \"registration_service\": \"Heisswachsen\",\r\n  \"registration_comment\": \"no comment\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7244/api/Registration",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7244",
+					"path": [
+						"api",
+						"Registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhbGV4YW5kZXIiLCJuYmYiOjE2NzQ3NjAzMDYsImV4cCI6MTY3NDg0NjcwNiwiaWF0IjoxNjc0NzYwMzA2fQ.M8D8bkqwM2vcB76w5TgXULRqrhKAWpQfa9g9mtCEdjGVKDAgLnc1819KALKJazaCrozwcKyXYC6WSeW42dI6Gw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"registration_name\": \"Alexander Ernst\",\r\n    \"registration_email\": \"alexander.ernst04@gmail.com\",\r\n    \"registration_phone\": \"077 463 35 93\",\r\n    \"registration_create_date\": \"2022-10-05T00:00:00Z\",\r\n   \"registration_pickup_date\": \"2022-10-10T00:00:00Z\",\r\n    \"registration_status\": \"abgeschlossen\",\r\n    \"registration_priority\": \"Standard\",\r\n    \"registration_service\": \"Grosser-Service\",\r\n    \"registration_comment\": \"no comment\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7244/api/Registration/63d175c5cd088b75cba27209",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7244",
+					"path": [
+						"api",
+						"Registration",
+						"63d175c5cd088b75cba27209"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhbGV4YW5kZXIiLCJuYmYiOjE2NzQ3NjAzMDYsImV4cCI6MTY3NDg0NjcwNiwiaWF0IjoxNjc0NzYwMzA2fQ.M8D8bkqwM2vcB76w5TgXULRqrhKAWpQfa9g9mtCEdjGVKDAgLnc1819KALKJazaCrozwcKyXYC6WSeW42dI6Gw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7244/api/Registration/63d2d020ff09363d7dd7321b",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7244",
+					"path": [
+						"api",
+						"Registration",
+						"63d2d020ff09363d7dd7321b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetByID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhbGV4YW5kZXIiLCJuYmYiOjE2NzQ3NjAzMDYsImV4cCI6MTY3NDg0NjcwNiwiaWF0IjoxNjc0NzYwMzA2fQ.M8D8bkqwM2vcB76w5TgXULRqrhKAWpQfa9g9mtCEdjGVKDAgLnc1819KALKJazaCrozwcKyXYC6WSeW42dI6Gw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7244/api/Registration/63d175c5cd088b75cba27209",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7244",
+					"path": [
+						"api",
+						"Registration",
+						"63d175c5cd088b75cba27209"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetStatus",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhbGV4YW5kZXIiLCJuYmYiOjE2NzQ3NjAzMDYsImV4cCI6MTY3NDg0NjcwNiwiaWF0IjoxNjc0NzYwMzA2fQ.M8D8bkqwM2vcB76w5TgXULRqrhKAWpQfa9g9mtCEdjGVKDAgLnc1819KALKJazaCrozwcKyXYC6WSeW42dI6Gw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7244/api/Status",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7244",
+					"path": [
+						"api",
+						"Status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetStatusByStatus",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhbGV4YW5kZXIiLCJuYmYiOjE2NzQ3NjAzMDYsImV4cCI6MTY3NDg0NjcwNiwiaWF0IjoxNjc0NzYwMzA2fQ.M8D8bkqwM2vcB76w5TgXULRqrhKAWpQfa9g9mtCEdjGVKDAgLnc1819KALKJazaCrozwcKyXYC6WSeW42dI6Gw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7244/api/Status/abgeschlossen",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7244",
+					"path": [
+						"api",
+						"Status",
+						"abgeschlossen"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"user_username\": \"alexander\",\r\n  \"user_password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7244/api/User/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7244",
+					"path": [
+						"api",
+						"User",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unban",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhbGV4YW5kZXIiLCJuYmYiOjE2NzQ3NjAzMDYsImV4cCI6MTY3NDg0NjcwNiwiaWF0IjoxNjc0NzYwMzA2fQ.M8D8bkqwM2vcB76w5TgXULRqrhKAWpQfa9g9mtCEdjGVKDAgLnc1819KALKJazaCrozwcKyXYC6WSeW42dI6Gw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7244/api/User/unban/63d2ac832e0befdd8e9539dc",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7244",
+					"path": [
+						"api",
+						"User",
+						"unban",
+						"63d2ac832e0befdd8e9539dc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUsers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhbGV4YW5kZXIiLCJuYmYiOjE2NzQ3NjAzMDYsImV4cCI6MTY3NDg0NjcwNiwiaWF0IjoxNjc0NzYwMzA2fQ.M8D8bkqwM2vcB76w5TgXULRqrhKAWpQfa9g9mtCEdjGVKDAgLnc1819KALKJazaCrozwcKyXYC6WSeW42dI6Gw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7244/api/User",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7244",
+					"path": [
+						"api",
+						"User"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "JWT Token 05.11",
+			"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhbGV4IiwibmJmIjoxNjY3NjUwNzk5LCJleHAiOjE2Njc3MzcxOTksImlhdCI6MTY2NzY1MDc5OX0.fP-shdhtDuvdQnMwjkvt4C7-Wri4_uKceD_E95uRLqdo5Y6Zr9ungmOvJNZymctf_B5PoMs81Z3bSBRSD6yurg"
+		}
+	]
+}
