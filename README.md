@@ -14,5 +14,5 @@ Dieses Projekt wurde auf **.NET 6.0** erstellt und folgende NuGet Packete (mit V
 - Microsoft.AspNetCore.Authentication.JwtBearer, Version=6.0.13
 - MongoDB.Driver, Version=2.18.0
 - Serilog.AspNetCore, Version=6.1.0
-- Swashbuckle.AspNetCore, Version=6.5.0
+- Swashbuckle.AspNetCore, Version=6.5.0  
 Visual Studio ist bei erstellung dieses Projektes auf Version 17.4.33122.133
