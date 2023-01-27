@@ -37,6 +37,7 @@ namespace JetstreamSkiserviceAPIMongoDB.Services
         /// <returns>Liste von Registrationen</returns>
         public List<Registration> Get()
         {
+            // TO-DO: schönere ausgabe
             var sort = Builders<Registration>.Sort.Ascending("status");
             return _registrationCollection.Find(_ => true).Sort(sort).ToList();
         }

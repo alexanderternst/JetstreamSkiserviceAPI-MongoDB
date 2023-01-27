@@ -66,6 +66,7 @@ namespace JetstreamSkiserviceAPIMongoDB.Controllers
         {
             try
             {
+                updatedRegistration.Id = null;
                 var registration = _registrationService.Get(id);
                 if (registration == null)
                 {
@@ -118,7 +119,10 @@ namespace JetstreamSkiserviceAPIMongoDB.Controllers
         public ActionResult Post(Registration newRegistration)
         {
             try
-            { 
+            {
+                // TO-DO: JSONIgnore for Id
+                newRegistration.Id = null;
+
                 _registrationService.Create(newRegistration);
                 return CreatedAtAction(nameof(Get), new { id = newRegistration.Id }, newRegistration);
             }
