@@ -25,7 +25,7 @@ namespace JetstreamSkiserviceAPIMongoDB.Controllers
         }
 
         /// <summary>
-        /// Post Methode welche Service aufruft und Authentifikation durchführt und JWT-Key ausgibt
+        /// Post Methode welche Service aufruft und Authentifikation durchführt/JWT-Key ausgibt
         /// </summary>
         /// <param name="login">Login</param>
         /// <returns>ActionResult (JWT-Token)</returns>
@@ -35,34 +35,24 @@ namespace JetstreamSkiserviceAPIMongoDB.Controllers
         {
             try
             {
-                List<User> users = new List<User>();
+                List<User?> users = new List<User?>();
                 users = _userService.Get();
 
                 foreach (User? user in users)
                 {
-                    if (user.Username == login.Username && user.Password == login.Password)
+                    if (user.Username == login.Username && user.Password == login.Password && user.Counter < 3)
                     {
-                        if (user.Counter >= 3)
-                        {
-                            return BadRequest("This user seems to have been banned. Please contact our support team.");
-                        }
-                        else
-                        {
-                            return new JsonResult(new { user_username = user.Username, token = _userService.CreateToken(user.Username) });
-                        }
+                        return new JsonResult(new { user_username = user.Username, token = _userService.CreateToken(user.Username) });
                     }
-                    else if (user.Username == login.Username && user.Password != login.Password)
+                    else if (user.Username == login.Username && user.Password != login.Password && user.Counter < 3)
                     {
-                        if (user.Counter >= 3)
-                        {
-                            return BadRequest("This user seems to have been banned. Please contact our support team.");
-                        }
-                        else
-                        {
-                            user.Counter++;
-                            _userService.Ban(user.Id);
-                            return Unauthorized($"Invalid credentials. {3 - user.Counter} attempts left");
-                        }
+                         user.Counter++;
+                        _userService.Ban(user.Id);
+                        return Unauthorized($"Invalid credentials. {3 - user.Counter} attempts left");
+                    }
+                    else if (user.Username == login.Username && user.Counter >= 3)
+                    {
+                        return BadRequest("This user has been banned. Please contact our support team.");
                     }
                     else
                     {
