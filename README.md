@@ -16,5 +16,5 @@ Dieses Projekt wurde auf **.NET 6.0** erstellt und folgende NuGet Packete (mit V
 - Serilog.AspNetCore, Version=6.1.0
 - Swashbuckle.AspNetCore, Version=6.5.0  
 
-Visual Studio ist bei erstellung dieses Projektes auf **Version 17.4.33122.133**
+Visual Studio ist bei erstellung dieses Projektes auf **Version 17.4.33122.133**  
 Auf dem Rechner mit dem das Projekt erstellt wurde läuft eine Version von Microsoft Windows 11
