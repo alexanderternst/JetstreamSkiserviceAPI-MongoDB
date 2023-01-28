@@ -71,6 +71,8 @@ db.createCollection("users", {
             },
             counter: {
                bsonType: "int",
+               minimum: 0,
+               maximum: 3,
                description: "'counter' must be an int and is required"
             },
             role: {

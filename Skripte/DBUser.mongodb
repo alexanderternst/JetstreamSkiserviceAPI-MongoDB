@@ -1,0 +1,22 @@
+use SkiServiceDB
+// passwd: alexander
+db.createUser(
+  {
+    user: "readWriteUser",
+    pwd:  passwordPrompt(),
+    roles: [ { role: "readWrite", db: "SkiServiceDB" }]
+  }
+)
+
+// passwd: alex
+db.createUser({
+    user: "readUser",
+    pwd: passwordPrompt(),
+    roles: [ { role: "read", db: "SkiServiceDB" }]
+})
+
+// Login after Connection
+db.auth("readUser", passwordPrompt())
+
+// Login with mongosh
+mongosh --port 27017 --authenticationDatabase "SkiServiceDB" -u "readUser" -p
