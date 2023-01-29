@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<Projekt><Options>True|3|0|*|C:\tools|-1|-657931|-4144960|-9868951|-4194304|EN|1|0|False|*|1000|1|CHF|2.4.0.0</Options>
+<Projekt><Options>True|3|0|*|C:\tools|-1|-657931|-4144960|-1|-4194304|EN|1|0|False|*|1000|1|CHF|2.4.0.0</Options>
 <DBid>0</DBid>
 <Work>
 <Name>Projektplanung Jetstream Service</Name><Status>1</Status><Start>2023-01-19T00:00:00</Start><Ende>2023-02-05T00:00:00</Ende><PL>DS</PL><StdPlan>20</StdPlan><StdBisher>19.0</StdBisher><StdRest>1</StdRest><ExtKostPlan>0</ExtKostPlan>
@@ -36,7 +36,7 @@
 <Name>F&#252;r Web API Aufbau entscheiden</Name><Status>2</Status><Start>2023-01-23T00:00:00</Start><Ende>2023-01-24T00:00:00</Ende><StdPlan>1</StdPlan><StdBisher>1.0</StdBisher><StdRest>0</StdRest><ExtKostPlan>0</ExtKostPlan>
 </Work>
 <Work>
-<Name>F&#252;r Zusatzanforderungen entscheiden</Name><Status>2</Status><Start>2023-01-23T00:00:00</Start><Ende>2023-01-24T00:00:00</Ende><StdPlan>1</StdPlan><StdBisher>1.0</StdBisher><StdRest>0</StdRest><ExtKostPlan>0</ExtKostPlan>
+<Name>F&#252;r Zusatzanfeatures entscheiden</Name><Status>2</Status><Start>2023-01-23T00:00:00</Start><Ende>2023-01-24T00:00:00</Ende><StdPlan>1</StdPlan><StdBisher>1.0</StdBisher><StdRest>0</StdRest><ExtKostPlan>0</ExtKostPlan>
 </Work>
 </Work>
 <Work>
