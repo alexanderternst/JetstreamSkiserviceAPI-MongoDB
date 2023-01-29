@@ -10,7 +10,7 @@ Für die Authentifikation von Admins habe ich ein JWT Token, welches einen Tag g
 Zuletzt habe ich für die Durchsetzung des Web APIs Services/Controller und Dependency Injection (DI) verwendet.
 
 ## Technologien/Software
-Dieses Projekt wurde auf *.NET 6.0* erstellt und folgende NuGet Packete (mit Versionen) wurden/kamen installiert:  
+Dieses Projekt wurde auf *.NET 6.0* erstellt und folgende NuGet Pakete (mit Versionen) wurden/kamen installiert:  
 - Microsoft.AspNetCore.Authentication.JwtBearer, *Version=6.0.13*
 - MongoDB.Driver, *Version=2.18.0*
 - Serilog.AspNetCore, *Version=6.1.0*
