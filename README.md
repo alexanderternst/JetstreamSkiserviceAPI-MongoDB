@@ -18,3 +18,9 @@ Dieses Projekt wurde auf *.NET 6.0* erstellt und folgende NuGet Pakete (mit Vers
 
 Visual Studio 2022 ist bei erstellung dieses Projektes auf *Version 17.4.4*  
 Auf dem Rechner mit dem das Projekt erstellt wurde läuft eine Version von *Microsoft Windows 11*
+
+## Weitere Informationen
+
+Wenn Sie weitere Informationen zu diesem Projekt wollen, können Sie die Projektdokumentation nach IPERKA im GitHub Repo nachlesen.  
+Wenn Sie mehr Informationen zu diesem Web API wollen, können Sie die Swagger Dokumentation durch Visual Studio nachlesen.  
+Um das Web API Projekt zu testen, können Sie die Postman Collection im GitHub Repo verwenden.
