@@ -1,7 +1,7 @@
 # Add MongoDB Tools bin Folder to Enviroment Path Variables
 
 # Set Variables
-Write-Host "Welcome to Backup mongoDB Script"
+Write-Host "MongoDB Backup Script"
 $database = Read-Host -Prompt "Enter the name of the database you want to backup"
 if (!$database)
 { Write-Host "Invalid name, exiting programm"
