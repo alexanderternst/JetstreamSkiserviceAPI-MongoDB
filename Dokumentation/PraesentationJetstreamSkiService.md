@@ -29,13 +29,13 @@ marp: true
 
 # Zeitplanung/PSP
 
-![width:650px](/bilder/ProjektplanungWBS.png)
+![width:650px](https://github.com/alexanderternst/JetstreamSkiserviceAPI-MongoDB/blob/master/Dokumentation/bilder/ProjektplanungWBS.png?raw=true)
 
 ---
 
 # Zeitplanung/PSP
 
-![height:500px](/bilder/ProjektplanungGANTT.png)
+![height:500px](https://github.com/alexanderternst/JetstreamSkiserviceAPI-MongoDB/blob/master/Dokumentation/bilder/ProjektplanungGANTT.png?raw=true)
 
 --- 
 
