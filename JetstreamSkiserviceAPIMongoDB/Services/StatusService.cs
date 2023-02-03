@@ -37,7 +37,6 @@ namespace JetstreamSkiserviceAPIMongoDB.Services
         /// <returns>Liste von Registrationen</returns>
         public List<Registration> Get()
         {
-            // TO-DO: schönere ausgabe
             var sort = Builders<Registration>.Sort.Ascending("status");
             return _registrationCollection.Find(_ => true).Sort(sort).ToList();
         }
@@ -51,6 +50,12 @@ namespace JetstreamSkiserviceAPIMongoDB.Services
         {
             var filter = Builders<Registration>.Filter.Eq("status", status);
             return _registrationCollection.Find(filter).ToList();
+        }
+
+        public void Update(string id, StatusModel statusModel)
+        {
+            var update = Builders<Registration>.Update.Set("status", statusModel.Status);
+            _registrationCollection.UpdateOne(x => x.Id == id, update);
         }
     }
 }

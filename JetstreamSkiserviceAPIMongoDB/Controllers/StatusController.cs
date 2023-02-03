@@ -2,6 +2,7 @@
 using JetstreamSkiserviceAPIMongoDB.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json.Serialization;
 
 namespace JetstreamSkiserviceAPIMongoDB.Controllers
 {
@@ -11,6 +12,7 @@ namespace JetstreamSkiserviceAPIMongoDB.Controllers
     public class StatusController : ControllerBase
     {
         private IStatusService _statusService;
+        private IRegistrationService _registrationService;
         private readonly ILogger<StatusController> _logger;
 
         /// <summary>
@@ -18,10 +20,11 @@ namespace JetstreamSkiserviceAPIMongoDB.Controllers
         /// </summary>
         /// <param name="statusService">Service Interface</param>
         /// <param name="logger">Logger</param>
-        public StatusController(IStatusService statusService, ILogger<StatusController> logger)
+        public StatusController(IStatusService statusService, ILogger<StatusController> logger, IRegistrationService registrationService)
         {
             _statusService = statusService;
             _logger = logger;
+            _registrationService = registrationService;
         }
 
         /// <summary>
@@ -58,6 +61,29 @@ namespace JetstreamSkiserviceAPIMongoDB.Controllers
                     return NotFound();
                 }
                 return registration;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+                return BadRequest("Error: " + ex.Message);
+            }
+        }
+
+        [AllowAnonymous]
+        [HttpPut("{id:length(24)}")]
+        public ActionResult Update(string id, StatusModel statusModel)
+        {
+            try
+            {
+                var registration = _registrationService.Get(id);
+                if (registration == null)
+                {
+                    return NotFound();
+                }
+
+                _statusService.Update(id, statusModel);
+                registration.Status = statusModel.Status;
+                return CreatedAtAction(nameof(Get), registration);
             }
             catch (Exception ex)
             {

@@ -10,5 +10,7 @@ namespace JetstreamSkiserviceAPIMongoDB.Services
         List<Registration> Get();
 
         List<Registration> Get(string status);
+
+        void Update(string id, StatusModel statusModel);
     }
 }

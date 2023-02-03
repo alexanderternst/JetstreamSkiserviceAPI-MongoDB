@@ -28,6 +28,7 @@ namespace JetstreamSkiserviceAPIMongoDB.Controllers
         /// Get Methode welche Service aufruft und Registrationen abruft
         /// </summary>
         /// <returns>Liste von Registrationen</returns>
+        [AllowAnonymous]
         [HttpGet]
         public List<Registration> Get() => _registrationService.Get();
 

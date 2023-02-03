@@ -18,5 +18,5 @@ db.createUser({
 // Login after Connection
 db.auth("readUser", passwordPrompt())
 
-// Login with mongosh
+// Login with mongosh in PowerShell
 mongosh --port 27017 --authenticationDatabase "SkiServiceDB" -u "readUser" -p
