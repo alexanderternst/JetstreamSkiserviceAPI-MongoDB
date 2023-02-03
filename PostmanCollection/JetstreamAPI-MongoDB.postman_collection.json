@@ -272,7 +272,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhbGV4YW5kZXIiLCJuYmYiOjE2NzQ3NjAzMDYsImV4cCI6MTY3NDg0NjcwNiwiaWF0IjoxNjc0NzYwMzA2fQ.M8D8bkqwM2vcB76w5TgXULRqrhKAWpQfa9g9mtCEdjGVKDAgLnc1819KALKJazaCrozwcKyXYC6WSeW42dI6Gw",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhbGV4YW5kZXIiLCJuYmYiOjE2NzQ4MDUyNjksImV4cCI6MTY3NDg5MTY2OSwiaWF0IjoxNjc0ODA1MjY5fQ.1j1Y7JtudlIzW_1B08Tuq0W_3QmSpTX0ao-ZCN2jJbpKSXb2PhT7QuJFQ3WNBns2ckhK8-Qse4BZngKC3kIV7Q",
 							"type": "string"
 						}
 					]
@@ -280,7 +280,7 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "https://localhost:7244/api/User/unban/63d2ac832e0befdd8e9539dc",
+					"raw": "https://localhost:7244/api/User/unban/63d2d467445b607db17116fc",
 					"protocol": "https",
 					"host": [
 						"localhost"
@@ -290,7 +290,7 @@
 						"api",
 						"User",
 						"unban",
-						"63d2ac832e0befdd8e9539dc"
+						"63d2d467445b607db17116fc"
 					]
 				}
 			},
@@ -304,7 +304,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhbGV4YW5kZXIiLCJuYmYiOjE2NzQ3NjAzMDYsImV4cCI6MTY3NDg0NjcwNiwiaWF0IjoxNjc0NzYwMzA2fQ.M8D8bkqwM2vcB76w5TgXULRqrhKAWpQfa9g9mtCEdjGVKDAgLnc1819KALKJazaCrozwcKyXYC6WSeW42dI6Gw",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhbGV4YW5kZXIiLCJuYmYiOjE2NzQ4MDUyNjksImV4cCI6MTY3NDg5MTY2OSwiaWF0IjoxNjc0ODA1MjY5fQ.1j1Y7JtudlIzW_1B08Tuq0W_3QmSpTX0ao-ZCN2jJbpKSXb2PhT7QuJFQ3WNBns2ckhK8-Qse4BZngKC3kIV7Q",
 							"type": "string"
 						}
 					]
@@ -321,6 +321,36 @@
 					"path": [
 						"api",
 						"User"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"registration_status\": \"Offen\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7244/api/Status/63d175c5cd088b75cba27209",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7244",
+					"path": [
+						"api",
+						"Status",
+						"63d175c5cd088b75cba27209"
 					]
 				}
 			},
