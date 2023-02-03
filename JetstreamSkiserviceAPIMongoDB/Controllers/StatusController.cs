@@ -69,7 +69,12 @@ namespace JetstreamSkiserviceAPIMongoDB.Controllers
             }
         }
 
-        [AllowAnonymous]
+        /// <summary>
+        /// Update Methode welche Service aufruft um in Registration nur Status zu aktualisieren
+        /// </summary>
+        /// <param name="id">id</param>
+        /// <param name="statusModel">Status Model</param>
+        /// <returns></returns>
         [HttpPut("{id:length(24)}")]
         public ActionResult Update(string id, StatusModel statusModel)
         {

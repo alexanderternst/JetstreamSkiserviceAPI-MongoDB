@@ -52,6 +52,11 @@ namespace JetstreamSkiserviceAPIMongoDB.Services
             return _registrationCollection.Find(filter).ToList();
         }
 
+        /// <summary>
+        /// Update Methode welche in Registration von MongoDB Datenbank nur Status aktualisiert
+        /// </summary>
+        /// <param name="id">id</param>
+        /// <param name="statusModel">Status Model</param>
         public void Update(string id, StatusModel statusModel)
         {
             var update = Builders<Registration>.Update.Set("status", statusModel.Status);
