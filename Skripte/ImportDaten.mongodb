@@ -1,3 +1,5 @@
+use SkiServiceDB
+
 db.registrations.insertMany([
   {
     "name": "Alexander Ernst",
@@ -191,6 +193,13 @@ db.registrations.insertMany([
 db.users.insertOne({
   username: "alexander",
   password: "1234",
+  counter: 0,
+  role: "level1"
+})
+
+db.users.insertOne({
+  username: "alexanderernst",
+  password: "test123",
   counter: 0,
   role: "level1"
 })

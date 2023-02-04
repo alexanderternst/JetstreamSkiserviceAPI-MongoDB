@@ -46,7 +46,7 @@ namespace JetstreamSkiserviceAPIMongoDB.Controllers
                     }
                     else if (user.Username == login.Username && user.Password != login.Password && user.Counter < 3)
                     {
-                         user.Counter++;
+                        user.Counter++;
                         _userService.Ban(user.Id);
                         return Unauthorized($"Invalid credentials. {3 - user.Counter} attempts left");
                     }
@@ -89,7 +89,7 @@ namespace JetstreamSkiserviceAPIMongoDB.Controllers
         }
 
         /// <summary>
-        /// Get Methode welche Service aufruft und Benutzer ausgibt
+        /// Get Methode welche Service aufruft und Benutzer mit Passwort auf null (aus Sicherheitsgründen) gesetzt ausgibt
         /// </summary>
         /// <returns>Liste von Benutzern</returns>
         [HttpGet]
@@ -97,7 +97,12 @@ namespace JetstreamSkiserviceAPIMongoDB.Controllers
         {
             try
             {
-                return _userService.Get();
+                List<User> users = _userService.Get();
+                foreach (User user in users)
+                {
+                    user.Password = null;
+                }
+                return users;
             }
             catch (Exception ex)
             {

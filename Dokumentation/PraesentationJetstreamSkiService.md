@@ -1,9 +1,8 @@
 ---
 marp: true
-#theme: uncover_class: invert
 ---
 
-# Präsentation Jetstream Ski Service
+# Präsentation Jetstream SkiService
 ## Alexander Ernst
 
 ---
@@ -23,19 +22,19 @@ marp: true
 # Ausgangslage/Anforderungen
 
 * Die Firma Jetstream-Service führt als KMU in der Wintersaison Skiservicearbeiten durch.
-* Die bis anhin eingesetzte relationale Datenbank genügt den damit verbundenen Ansprüchen an Datenverteilung und Skalierung nicht mehr. Sie wollen auf NoSQL wechseln.
+* Die bis anhin eingesetzte relationale Datenbank genügt den damit verbundenen Ansprüchen an Datenverteilung und Skalierung nicht mehr. Sie wollen auf eine NoSQL Datenbank wechseln.
 
 ---
 
 # Zeitplanung/PSP
 
-![width:650px](https://github.com/alexanderternst/JetstreamSkiserviceAPI-MongoDB/blob/master/Dokumentation/bilder/ProjektplanungWBS.png?raw=true)
+![width:800px](https://github.com/alexanderternst/JetstreamSkiserviceAPI-MongoDB/blob/master/Dokumentation/bilder/ProjektplanungWBS.png?raw=true)
 
 ---
 
 # Zeitplanung/PSP
 
-![height:500px](https://github.com/alexanderternst/JetstreamSkiserviceAPI-MongoDB/blob/master/Dokumentation/bilder/ProjektplanungGANTT.png?raw=true)
+![height:600px](https://github.com/alexanderternst/JetstreamSkiserviceAPI-MongoDB/blob/master/Dokumentation/bilder/ProjektplanungGANTT.png?raw=true)
 
 --- 
 
@@ -52,9 +51,9 @@ marp: true
 
 # Zusatzfeature
 
-- Zugriff von Status auf Registrationen
+- Zugriff auf Registrationen nach Status/Aktualisieren von nur Status
 - User nach 3 falschen Loginversuchen sperren
-- Backup/Restore
+- Backup/Restore Skripte
 
 ---
 
@@ -63,21 +62,22 @@ marp: true
 | Tool | Beschreibung |
 | --- | --- |
 | GitHub | Versionierungstool |
-| Visual Studio | Entwicklungsumgebung |
+| Visual Studio 2022 | Entwicklungsumgebung |
 | Postman | API-Testtool |
-| WPF | Testing |
+| WPF Applikation | Benutzer-Testtool |
+
 
 ---
 
 # Live Demo
 
-![width:600px](https://media.istockphoto.com/id/1328399434/photo/live-demo-symbol-concept-words-live-demo-on-wooden-blocks-on-a-beautiful-orange-background.jpg?s=612x612&w=0&k=20&c=xrEz6Zdkz2htzivAG-JrwhWTW0v2emTz6PZ_aFIHzPw=)
+![width:650px](https://media.istockphoto.com/id/1328399434/photo/live-demo-symbol-concept-words-live-demo-on-wooden-blocks-on-a-beautiful-orange-background.jpg?s=612x612&w=0&k=20&c=xrEz6Zdkz2htzivAG-JrwhWTW0v2emTz6PZ_aFIHzPw=)
 
 ---
 
 # Reflexion/Fazit
 
-- Hauptanforderungen erfülltn (API, Authentifikation, Zusatzfeature)
+- Hauptanforderungen erfüllt (API, Authentifikation, Zusatzfeature)
 - API ist lauffähig
-- Mapper sind noch nicht implementiert
-- Viel über MongoDB und etwas neues an C# gelernt
+- Statistische Auswertung ist noch nicht implementiert
+- Viel neues über MongoDB und C# MongoDB Driver gelernt

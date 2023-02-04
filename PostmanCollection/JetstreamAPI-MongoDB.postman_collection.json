@@ -14,7 +14,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhbGV4YW5kZXIiLCJuYmYiOjE2NzQ3NjAzMDYsImV4cCI6MTY3NDg0NjcwNiwiaWF0IjoxNjc0NzYwMzA2fQ.M8D8bkqwM2vcB76w5TgXULRqrhKAWpQfa9g9mtCEdjGVKDAgLnc1819KALKJazaCrozwcKyXYC6WSeW42dI6Gw",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhbGV4YW5kZXIiLCJuYmYiOjE2NzU1MTI5MjQsImV4cCI6MTY3NTU5OTMyNCwiaWF0IjoxNjc1NTEyOTI0fQ.ZYkoJDjpxllfaDp4JmLtv3koTpvLQbfnBAaShgCUY3_lP9gyMquaZkMUWc3CX9prPUd_0dKEB7M3c5DwM59uig",
 							"type": "string"
 						}
 					]
@@ -46,7 +46,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"registration_name\": \"Alexander Ernst\",\r\n  \"registration_email\": \"alexander.ernst04@gmail.com\",\r\n  \"registration_phone\": \"0774633593\",\r\n  \"registration_create_date\": \"2022-12-17\",\r\n  \"registration_pickup_date\": \"2022-12-22\",\r\n  \"registration_status\": \"Offen\",\r\n  \"registration_priority\": \"Express\",\r\n  \"registration_service\": \"Heisswachsen\",\r\n  \"registration_comment\": \"no comment\"\r\n}",
+					"raw": "\r\n{\r\n  \"registration_name\": \"Alexander Ernst\",\r\n  \"registration_email\": \"alexander.ernst04@gmail.com\",\r\n  \"registration_phone\": \"0774633593\",\r\n  \"registration_create_date\": \"2022-12-17\",\r\n  \"registration_pickup_date\": \"2022-12-22\",\r\n  \"registration_status\": \"Offen\",\r\n  \"registration_priority\": \"Express\",\r\n  \"registration_service\": \"Heisswachsen\",\r\n  \"registration_comment\": \"no comment\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -76,7 +76,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhbGV4YW5kZXIiLCJuYmYiOjE2NzQ3NjAzMDYsImV4cCI6MTY3NDg0NjcwNiwiaWF0IjoxNjc0NzYwMzA2fQ.M8D8bkqwM2vcB76w5TgXULRqrhKAWpQfa9g9mtCEdjGVKDAgLnc1819KALKJazaCrozwcKyXYC6WSeW42dI6Gw",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhbGV4YW5kZXIiLCJuYmYiOjE2NzU1MTI5MjQsImV4cCI6MTY3NTU5OTMyNCwiaWF0IjoxNjc1NTEyOTI0fQ.ZYkoJDjpxllfaDp4JmLtv3koTpvLQbfnBAaShgCUY3_lP9gyMquaZkMUWc3CX9prPUd_0dKEB7M3c5DwM59uig",
 							"type": "string"
 						}
 					]
@@ -85,7 +85,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"registration_name\": \"Alexander Ernst\",\r\n    \"registration_email\": \"alexander.ernst04@gmail.com\",\r\n    \"registration_phone\": \"077 463 35 93\",\r\n    \"registration_create_date\": \"2022-10-05T00:00:00Z\",\r\n   \"registration_pickup_date\": \"2022-10-10T00:00:00Z\",\r\n    \"registration_status\": \"abgeschlossen\",\r\n    \"registration_priority\": \"Standard\",\r\n    \"registration_service\": \"Grosser-Service\",\r\n    \"registration_comment\": \"no comment\"\r\n}",
+					"raw": "{\r\n    \"registration_name\": \"Alexander Ernst\",\r\n    \"registration_email\": \"alexander.ernst04@gmail.com\",\r\n    \"registration_phone\": \"0044\",\r\n    \"registration_create_date\": \"2022-12-17T00:00:00\",\r\n    \"registration_pickup_date\": \"2022-12-22T00:00:00\",\r\n    \"registration_status\": \"Offen\",\r\n    \"registration_priority\": \"Express\",\r\n    \"registration_service\": \"Heisswachsen\",\r\n    \"registration_comment\": \"no comment\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -93,7 +93,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://localhost:7244/api/Registration/63d175c5cd088b75cba27209",
+					"raw": "https://localhost:7244/api/Registration/63de4cd9e35e8a6e90ebc504",
 					"protocol": "https",
 					"host": [
 						"localhost"
@@ -102,7 +102,7 @@
 					"path": [
 						"api",
 						"Registration",
-						"63d175c5cd088b75cba27209"
+						"63de4cd9e35e8a6e90ebc504"
 					]
 				}
 			},
@@ -116,7 +116,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhbGV4YW5kZXIiLCJuYmYiOjE2NzQ3NjAzMDYsImV4cCI6MTY3NDg0NjcwNiwiaWF0IjoxNjc0NzYwMzA2fQ.M8D8bkqwM2vcB76w5TgXULRqrhKAWpQfa9g9mtCEdjGVKDAgLnc1819KALKJazaCrozwcKyXYC6WSeW42dI6Gw",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhbGV4YW5kZXIiLCJuYmYiOjE2NzU1MTI5MjQsImV4cCI6MTY3NTU5OTMyNCwiaWF0IjoxNjc1NTEyOTI0fQ.ZYkoJDjpxllfaDp4JmLtv3koTpvLQbfnBAaShgCUY3_lP9gyMquaZkMUWc3CX9prPUd_0dKEB7M3c5DwM59uig",
 							"type": "string"
 						}
 					]
@@ -124,7 +124,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "https://localhost:7244/api/Registration/63d2d020ff09363d7dd7321b",
+					"raw": "https://localhost:7244/api/Registration/63de4cb0e35e8a6e90ebc503",
 					"protocol": "https",
 					"host": [
 						"localhost"
@@ -133,7 +133,7 @@
 					"path": [
 						"api",
 						"Registration",
-						"63d2d020ff09363d7dd7321b"
+						"63de4cb0e35e8a6e90ebc503"
 					]
 				}
 			},
@@ -147,7 +147,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhbGV4YW5kZXIiLCJuYmYiOjE2NzQ3NjAzMDYsImV4cCI6MTY3NDg0NjcwNiwiaWF0IjoxNjc0NzYwMzA2fQ.M8D8bkqwM2vcB76w5TgXULRqrhKAWpQfa9g9mtCEdjGVKDAgLnc1819KALKJazaCrozwcKyXYC6WSeW42dI6Gw",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhbGV4YW5kZXIiLCJuYmYiOjE2NzU1MTI5MjQsImV4cCI6MTY3NTU5OTMyNCwiaWF0IjoxNjc1NTEyOTI0fQ.ZYkoJDjpxllfaDp4JmLtv3koTpvLQbfnBAaShgCUY3_lP9gyMquaZkMUWc3CX9prPUd_0dKEB7M3c5DwM59uig",
 							"type": "string"
 						}
 					]
@@ -155,7 +155,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://localhost:7244/api/Registration/63d175c5cd088b75cba27209",
+					"raw": "https://localhost:7244/api/Registration/63de4cd9e35e8a6e90ebc504",
 					"protocol": "https",
 					"host": [
 						"localhost"
@@ -164,7 +164,7 @@
 					"path": [
 						"api",
 						"Registration",
-						"63d175c5cd088b75cba27209"
+						"63de4cd9e35e8a6e90ebc504"
 					]
 				}
 			},
@@ -178,7 +178,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhbGV4YW5kZXIiLCJuYmYiOjE2NzQ3NjAzMDYsImV4cCI6MTY3NDg0NjcwNiwiaWF0IjoxNjc0NzYwMzA2fQ.M8D8bkqwM2vcB76w5TgXULRqrhKAWpQfa9g9mtCEdjGVKDAgLnc1819KALKJazaCrozwcKyXYC6WSeW42dI6Gw",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhbGV4YW5kZXIiLCJuYmYiOjE2NzU1MTI5MjQsImV4cCI6MTY3NTU5OTMyNCwiaWF0IjoxNjc1NTEyOTI0fQ.ZYkoJDjpxllfaDp4JmLtv3koTpvLQbfnBAaShgCUY3_lP9gyMquaZkMUWc3CX9prPUd_0dKEB7M3c5DwM59uig",
 							"type": "string"
 						}
 					]
@@ -208,7 +208,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhbGV4YW5kZXIiLCJuYmYiOjE2NzQ3NjAzMDYsImV4cCI6MTY3NDg0NjcwNiwiaWF0IjoxNjc0NzYwMzA2fQ.M8D8bkqwM2vcB76w5TgXULRqrhKAWpQfa9g9mtCEdjGVKDAgLnc1819KALKJazaCrozwcKyXYC6WSeW42dI6Gw",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhbGV4YW5kZXIiLCJuYmYiOjE2NzU1MTI5MjQsImV4cCI6MTY3NTU5OTMyNCwiaWF0IjoxNjc1NTEyOTI0fQ.ZYkoJDjpxllfaDp4JmLtv3koTpvLQbfnBAaShgCUY3_lP9gyMquaZkMUWc3CX9prPUd_0dKEB7M3c5DwM59uig",
 							"type": "string"
 						}
 					]
@@ -241,7 +241,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"user_username\": \"alexander\",\r\n  \"user_password\": \"1234\"\r\n}",
+					"raw": "{\r\n  \"user_username\": \"alexanderernst\",\r\n  \"user_password\": \"test123\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -272,7 +272,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhbGV4YW5kZXIiLCJuYmYiOjE2NzQ4MDUyNjksImV4cCI6MTY3NDg5MTY2OSwiaWF0IjoxNjc0ODA1MjY5fQ.1j1Y7JtudlIzW_1B08Tuq0W_3QmSpTX0ao-ZCN2jJbpKSXb2PhT7QuJFQ3WNBns2ckhK8-Qse4BZngKC3kIV7Q",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhbGV4YW5kZXIiLCJuYmYiOjE2NzU1MTI5MjQsImV4cCI6MTY3NTU5OTMyNCwiaWF0IjoxNjc1NTEyOTI0fQ.ZYkoJDjpxllfaDp4JmLtv3koTpvLQbfnBAaShgCUY3_lP9gyMquaZkMUWc3CX9prPUd_0dKEB7M3c5DwM59uig",
 							"type": "string"
 						}
 					]
@@ -280,7 +280,7 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "https://localhost:7244/api/User/unban/63d2d467445b607db17116fc",
+					"raw": "https://localhost:7244/api/User/unban/63de4c173bf78516b688a50b",
 					"protocol": "https",
 					"host": [
 						"localhost"
@@ -290,7 +290,7 @@
 						"api",
 						"User",
 						"unban",
-						"63d2d467445b607db17116fc"
+						"63de4c173bf78516b688a50b"
 					]
 				}
 			},
@@ -304,7 +304,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhbGV4YW5kZXIiLCJuYmYiOjE2NzQ4MDUyNjksImV4cCI6MTY3NDg5MTY2OSwiaWF0IjoxNjc0ODA1MjY5fQ.1j1Y7JtudlIzW_1B08Tuq0W_3QmSpTX0ao-ZCN2jJbpKSXb2PhT7QuJFQ3WNBns2ckhK8-Qse4BZngKC3kIV7Q",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhbGV4YW5kZXIiLCJuYmYiOjE2NzU1MTI5MjQsImV4cCI6MTY3NTU5OTMyNCwiaWF0IjoxNjc1NTEyOTI0fQ.ZYkoJDjpxllfaDp4JmLtv3koTpvLQbfnBAaShgCUY3_lP9gyMquaZkMUWc3CX9prPUd_0dKEB7M3c5DwM59uig",
 							"type": "string"
 						}
 					]
@@ -329,11 +329,21 @@
 		{
 			"name": "PUT",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhbGV4YW5kZXIiLCJuYmYiOjE2NzU1MTI5MjQsImV4cCI6MTY3NTU5OTMyNCwiaWF0IjoxNjc1NTEyOTI0fQ.ZYkoJDjpxllfaDp4JmLtv3koTpvLQbfnBAaShgCUY3_lP9gyMquaZkMUWc3CX9prPUd_0dKEB7M3c5DwM59uig",
+							"type": "string"
+						}
+					]
+				},
 				"method": "PUT",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"registration_status\": \"Offen\"\r\n}",
+					"raw": "{\r\n    \"registration_status\": \"abgeschlossen\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -341,7 +351,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://localhost:7244/api/Status/63d175c5cd088b75cba27209",
+					"raw": "https://localhost:7244/api/Status/63de4cd9e35e8a6e90ebc504",
 					"protocol": "https",
 					"host": [
 						"localhost"
@@ -350,11 +360,31 @@
 					"path": [
 						"api",
 						"Status",
-						"63d175c5cd088b75cba27209"
+						"63de4cd9e35e8a6e90ebc504"
 					]
 				}
 			},
 			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		}
 	],
 	"variable": [

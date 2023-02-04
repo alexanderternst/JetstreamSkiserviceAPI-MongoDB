@@ -120,7 +120,6 @@ namespace JetstreamSkiserviceAPIMongoDB.Controllers
         {
             try
             {
-                // TO-DO: JSONIgnore for Id
                 newRegistration.Id = null;
 
                 _registrationService.Create(newRegistration);

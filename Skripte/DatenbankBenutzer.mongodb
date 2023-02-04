@@ -15,8 +15,15 @@ db.createUser({
     roles: [ { role: "read", db: "SkiServiceDB" }]
 })
 
+// passwd: alexander1
+db.createUser({
+    user: "adminUser",
+    pwd: passwordPrompt(),
+    roles: [ { role: "userAdminAnyDatabase", db: "admin"}]
+})
+
 // Login after Connection
 db.auth("readUser", passwordPrompt())
 
 // Login with mongosh in PowerShell
-mongosh --port 27017 --authenticationDatabase "SkiServiceDB" -u "readUser" -p
+mongosh --port 27017 --authenticationDatabase "SkiServiceDB" -u "readWriteUser" -p
