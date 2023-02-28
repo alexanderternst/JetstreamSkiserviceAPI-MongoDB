@@ -42,8 +42,8 @@ marp: true
 
 - **Informieren:** Ausgangslage, Technologien
 - **Planen:** Aufbau Datenbank/Web API, Zeitplanung
-- **Entscheiden:** Tools, Aufbau
-- **Realisieren:** Datenbank/Web API realisieren
+- **Entscheiden:** Tools, Aufbau Datenbank/Web API
+- **Realisieren:** Datenbank/Web API/Backup-, Restoreskripte realisieren
 - **Kontrollieren:** Mit Postman/WPF testen
 - **Auswerten:** Reflexion/Fazit
 
